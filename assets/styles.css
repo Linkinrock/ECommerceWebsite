@@ -92,7 +92,7 @@ body {
 .content-container {
 margin-top: 30px;
 width: 80%;
-max-width: 1282px;
+max-width: 90%;
 }
 
 .columns-wrapper {
@@ -396,15 +396,6 @@ max-width: 100%;
      margin-top: 40px;
      padding-left: 20px;
    }
- }
-
- .footer-divider {
-   border: 1px solid rgba(230, 230, 230, 1);
-   background-color: #e6e6e6;
-   height: 1px;
-   align-self: end;
-   width: 1223px;
-   max-width: 100%;
  }
 
  .footer-content {
