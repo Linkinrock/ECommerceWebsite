@@ -489,6 +489,18 @@ max-width: 100%;
    font-family: Inter, sans-serif;
    margin-top: 24px;
  }
+
+.product-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.product-link:hover {
+  text-decoration: underline;
+  color: #000;
+  font-weight: bold;
+}
+
 .content-container {
     box-sizing: none;
     width: 80%;
