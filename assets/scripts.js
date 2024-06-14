@@ -38,6 +38,21 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = 'sign.html';
     });
     document.getElementById('noodle1').addEventListener('click', () => {
-        window.location.href = 'product.html';
+        window.location.href = 'product_pages/simple_noodle.html';
+    });
+    document.getElementById('noodle2').addEventListener('click', () => {
+        window.location.href = 'product_pages/dou_chan.html';
+    });
+    document.getElementById('noodle3').addEventListener('click', () => {
+        window.location.href = 'product_pages/fu_shou.html';
+    });
+    document.getElementById('noodle4').addEventListener('click', () => {
+        window.location.href = 'product_pages/healthy_tomato_noodle.html';
+    });
+    document.getElementById('noodle5').addEventListener('click', () => {
+        window.location.href = 'product_pages/healthy_noodle.html';
+    });
+    document.getElementById('noodle6').addEventListener('click', () => {
+        window.location.href = 'product_pages/red_noodle.html';
     });
 });

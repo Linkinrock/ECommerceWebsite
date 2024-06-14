@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品頁面 - 福壽麵線</title>
+    <link rel="stylesheet" href="../assets/styles_product.css">
+</head>
+<body>
+    <div class="product-container">
+    <h1>連成製麵廠</h1>
+        <article class="container">
+            <section class="image-column">
+                <img loading="lazy" src="../assets/images/fu_shou_noodle.jpg" class="product-image" alt="Product image of 福壽麵線" />
+            </section>
+            <section class="details-column">
+              	<div class="product-details">
+                	<h1 class="product-name">福壽麵線</h1>
+                	<p class="clause">被生活壓得喘不過氣？</p>
+                	<p class="clause">你需要這款陽壽補給食品</p>
+                	<p class="product-price">$99</p>
+                	<p class="product-description">一包 = 八人份</p>
+                	<button class="add-to-cart-btn" tabindex="0">加入購物車</button>
+              	</div>
+            </section>
+        </article>
+        <div class="rating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+        </div>
+        <div class="rating-value">Rating: <span id="rating">0</span></div>
+        <form id="commentForm">
+            <textarea placeholder="Leave a comment" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <div class="comments-section">
+            <h2>Comments</h2>
+            <div id="comments"></div>
+        </div>
+    </div>
+    <script src="../assets/product.js"></script>
+</body>
+</html>
