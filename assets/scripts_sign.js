@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const user = JSON.parse(localStorage.getItem('user'));
         if (user && user.email === email) {
             alert('登入成功，稍後返回主頁');
-            window.location.href = 'profile.html'; // Replace 'profile.html' with your actual profile page URL
+            window.location.href = 'profile.html'; 
         } else {
             alert('電子郵件不正確');
         }

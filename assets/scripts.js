@@ -37,6 +37,42 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('sign').addEventListener('click', () => {
         window.location.href = 'sign.html';
     });
+    document.getElementById('searchButton').addEventListener('click', () => {
+        const inputField = document.getElementById('inputField');
+        const search = document.getElementById('search');
+        if (inputField.style.display == 'block') {
+            inputField.style.display = 'none';
+            search.style.display = 'block';
+        } else {
+            inputField.style.display = 'block';
+            search.style.display = 'none';
+        }
+    });
+    const secondNav = document.getElementById('navbar');
+    let lastScrollTop = 0;
+
+    window.addEventListener('scroll', () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+            // Scroll down
+            secondNav.style.top = '-50px'; // Hide second nav (adjust based on its height)
+        } else {
+            // Scroll up
+            secondNav.style.top = '100px'; // Show second nav (adjust based on top-nav height)
+        }
+        lastScrollTop = scrollTop;
+    });
+    document.querySelectorAll('.second-nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            if (this.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
     document.getElementById('noodle1').addEventListener('click', () => {
         window.location.href = 'product_pages/simple_noodle.html';
     });
@@ -55,4 +91,23 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('noodle6').addEventListener('click', () => {
         window.location.href = 'product_pages/red_noodle.html';
     });
+       // Shopping cart functionality
+       const cartIcon = document.getElementById('cartIcon');
+       const cartPopup = document.getElementById('cartPopup');
+   
+       cartIcon.addEventListener('mouseover', () => {
+           cartPopup.classList.add('active');
+       });
+   
+       cartIcon.addEventListener('mouseout', () => {
+           cartPopup.classList.remove('active');
+       });
+   
+       cartPopup.addEventListener('mouseover', () => {
+           cartPopup.classList.add('active');
+       });
+   
+       cartPopup.addEventListener('mouseout', () => {
+           cartPopup.classList.remove('active');
+       });
 });

@@ -8,22 +8,36 @@
     <title>連成製麵廠</title>
 </head>
 <body>
-    <section class="page-container">
-        <header class="main-header">
-            <div class="header-content">
-                <div class="top-bar">
-                <div class="company-name">連成製麵廠</div>
-                <nav class="nav-actions">
-                    <div class="search-label">搜尋</div>
-                    <img loading="lazy" src="assets/images/zoom-lens.png" alt="Search Icon" class="nav-icon" />
-                    <button id="sign" class="login-button">登入/註冊</button>
-                    <img loading="lazy" src="assets/images/shopping-cart.png" alt="Cart Icon" class="cart-icon" />
-                </nav>
-                </div>
+	<header class="main-header">
+        <div class="header-content">
+            <div class="top-bar">
+            	<div class="company-name">連成製麵廠</div>
+            	<nav class="nav-actions">
+                	<div type="text" id="search">搜尋</div>
+					<input type="text" id="inputField" placeholder="" />
+               	 	<img loading="lazy" src="assets/images/zoom-lens.png" alt="Search Icon" class="nav-icon" id="searchButton">
+                	<button id="sign" class="login-button">登入/註冊</button>
+               	 	<img loading="lazy" src="assets/images/shopping-cart.png" alt="Cart Icon" class="cart-icon" id="cartIcon" />
+            	</nav>
             </div>
-        </header>
-    </section>
-        <div class="container">
+        </div>
+    </header>
+	<nav class="navbar" id="navbar">
+        <ul>
+            <li><a href="#top">首頁</a></li>
+            <li><a href="#Products">商品一覽</a></li>
+            <li><a href="#Introduction">工廠介紹</a></li>
+            <li><a href="profile.html">個人資訊</a></li>
+        </ul>
+    </nav>
+	<div class="cart-popup" id="cartPopup">
+        <h2>購物車</h2>
+        <div class="empty-cart">
+            <img src="assets/images/making_noodle.JPG" alt="Empty Cart">
+            <p>尚無商品</p>
+        </div>
+    </div>
+        <div class="container" id="top">
             <div class="slide fade">
                 <img class="ad" src="assets/images/noodle_workshop.png">
                 <div class="text">連成製麵廠</div>
@@ -56,7 +70,7 @@
             <span class="dot" onclick="showSlides(5)"></span>
         </div>
         <section class="menu-section">
-          <h2>商品一覽</h2>
+          <h2 id="Products">商品一覽</h2>
           <article class="menu-container">
             <div class="row">
               <section class="column">
@@ -114,7 +128,7 @@
             	</div>
           	</article>
         </section>
-		<h2 style="margin-left: 10%;">工廠介紹</h2>
+		<h2 style="margin-left: 10%;" id="Introduction">工廠介紹</h2>
         <section class="content-container">
           	<div class="columns-wrapper">
           	<section class="left-column">
